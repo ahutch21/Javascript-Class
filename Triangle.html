@@ -1,0 +1,67 @@
+<script>
+var sideA=0;
+var sideB=0;
+var sideC=0;
+var sideAsqr=0;
+var sideBsqr=0;
+var sideCsqr=0;
+alert("This program assumes that sides A and B form the right angle in the triangle");
+sideA=prompt("Enter length for side A.  Leave blank if this is the side to be solved for.","");
+sideB=prompt("Enter length for side B.  Leave blank if this is the side to be solved for.","");
+
+  // If sides A and B are populated we know we're solving for side C, No prompt necessary
+if (sideA == "" || sideB == "")  
+{
+   sideC=prompt("Enter length for side C.","");
+}
+
+if (sideA == "") 
+{
+   alert("Determining length of Side A");
+    var sideBsqr = Math.pow(sideB,2);
+        //alert("sideBsqr = " + sideBsqr);
+    var sideCsqr=Math.pow(sideC, 2);
+    var sideCsqr=Math.round(sideCsqr);
+        //alert("sideCsqr = " + sideCsqr);
+    var sideAsqr=sideCsqr-sideBsqr;
+        //var sideAsqr=Math.round(sideAsqr);
+        //alert("sideAsqr = " + sideAsqr);
+    var sideA=Math.sqrt(sideAsqr);
+        //alert("sideA = " + sideA);
+    alert("Side A length is " + sideA);
+}
+
+if (sideB == "") 
+{
+   alert("Determining length of Side B");
+    var sideAsqr = Math.pow(sideA,2);
+        //alert("sideAsqr = " + sideAsqr);
+    var sideCsqr=Math.pow(sideC, 2);
+    var sideCsqr=Math.round(sideCsqr);
+        //alert("sideCsqr = " + sideCsqr);
+    var sideBsqr=sideCsqr-sideAsqr;
+        //var sideBsqr=Math.round(sideBsqr);
+        //alert("sideBsqr = " + sideBsqr);
+    var sideB=Math.sqrt(sideBsqr);
+        //alert("sideB = " + sideB);
+    alert("Side B length is " + sideB);
+}
+
+if (sideC == "") 
+{
+   alert("Determining length of Side C");
+    var sideAsqr = Math.pow(sideA,2);
+        //alert("sideAsqr = " + sideAsqr);
+    var sideBsqr=Math.pow(sideB, 2);
+        //var sideBsqr=Math.round(sideBsqr);
+        //alert("sideBsqr = " + sideBsqr);
+    var sideCsqr=sideAsqr+sideBsqr;
+        //var sideCsqr=Math.round(sideCsqr);
+        //alert("sideCsqr = " + sideCsqr);
+    var sideC=Math.sqrt(sideCsqr);
+        //alert("sideC = " + sideC);
+    alert("Side C length is " + sideC);
+}
+
+
+</script>
