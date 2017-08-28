@@ -5,7 +5,9 @@ var sideC=0;
 var sideAsqr=0;
 var sideBsqr=0;
 var sideCsqr=0;
+var RndDigits=0
 alert("This program assumes that sides A and B form the right angle in the triangle");
+RndDigits=prompt("How many decimal places should we round to?");
 sideA=prompt("Enter length for side A.  Leave blank if this is the side to be solved for.","");
 sideB=prompt("Enter length for side B.  Leave blank if this is the side to be solved for.","");
 
@@ -60,6 +62,7 @@ if (sideC == "")
         //alert("sideCsqr = " + sideCsqr);
     var sideC=Math.sqrt(sideCsqr);
         //alert("sideC = " + sideC);
+    var sideC=sideC.toFixed(RndDigits)
     alert("Side C length is " + sideC);
 }
 
