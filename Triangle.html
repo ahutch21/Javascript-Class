@@ -15,7 +15,13 @@ if (sideA == "" || sideB == "")
 {
    sideC=prompt("Enter length for side C.","");
 }
-RndDigits=prompt("How many decimal places should we round to?");
+
+RndDigits=prompt("How many decimal places should we round to?","");
+if (RndDigits == "")
+{
+    RndDigits=2;
+}
+
 if (sideA == "") 
 {
    alert("Determining length of Side A");
