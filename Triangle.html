@@ -6,7 +6,7 @@ var sideAsqr=0;
 var sideBsqr=0;
 var sideCsqr=0;
 var RndDigits=0
-alert("This program assumes that sides A and B form the right angle in the triangle");
+alert("This program assumes that sides A and B form the right angle \n in the triangle and that side C is the hypotenuse.");
 sideA=prompt("Enter length for side A.  Leave blank if this is the side to be solved for.","");
 sideB=prompt("Enter length for side B.  Leave blank if this is the side to be solved for.","");
 
@@ -16,11 +16,7 @@ if (sideA == "" || sideB == "")
    sideC=prompt("Enter length for side C.","");
 }
 
-RndDigits=prompt("How many decimal places should we round to?","");
-if (RndDigits == "")
-{
-    RndDigits=2;
-}
+
 
 if (sideA == "") 
 {
@@ -28,13 +24,15 @@ if (sideA == "")
     var sideBsqr = Math.pow(sideB,2);
         //alert("sideBsqr = " + sideBsqr);
     var sideCsqr=Math.pow(sideC, 2);
-    var sideCsqr=Math.round(sideCsqr);
+    var sideCsqr=sideCsqr.toFixed(2)
+        //var sideCsqr=Math.round(sideCsqr);
         //alert("sideCsqr = " + sideCsqr);
     var sideAsqr=sideCsqr-sideBsqr;
         //var sideAsqr=Math.round(sideAsqr);
         //alert("sideAsqr = " + sideAsqr);
     var sideA=Math.sqrt(sideAsqr);
         //alert("sideA = " + sideA);
+    var sideA=sideA.toFixed(1)
     alert("Side A length is " + sideA);
 }
 
@@ -44,13 +42,15 @@ if (sideB == "")
     var sideAsqr = Math.pow(sideA,2);
         //alert("sideAsqr = " + sideAsqr);
     var sideCsqr=Math.pow(sideC, 2);
-    var sideCsqr=Math.round(sideCsqr);
+    var sideCsqr=sideCsqr.toFixed(2)
+        //var sideCsqr=Math.round(sideCsqr);
         //alert("sideCsqr = " + sideCsqr);
     var sideBsqr=sideCsqr-sideAsqr;
         //var sideBsqr=Math.round(sideBsqr);
         //alert("sideBsqr = " + sideBsqr);
     var sideB=Math.sqrt(sideBsqr);
         //alert("sideB = " + sideB);
+    var sideB=sideB.toFixed(1)
     alert("Side B length is " + sideB);
 }
 
@@ -67,6 +67,11 @@ if (sideC == "")
         //alert("sideCsqr = " + sideCsqr);
     var sideC=Math.sqrt(sideCsqr);
         //alert("sideC = " + sideC);
+    RndDigits=prompt("How many decimal places should we round to?","");
+      if (RndDigits == "")
+      {
+         RndDigits=2;
+      }
     var sideC=sideC.toFixed(RndDigits)
     alert("Side C length is " + sideC);
 }
