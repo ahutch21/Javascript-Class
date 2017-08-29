@@ -26,16 +26,10 @@ if (sideA == "")
 {
    alert("Determining length of Side A");
     var sideBsqr = Math.pow(sideB,2);
-        //alert("sideBsqr = " + sideBsqr);
     var sideCsqr=Math.pow(sideC, 2);
     var sideCsqr=sideCsqr.toFixed(2)
-        //var sideCsqr=Math.round(sideCsqr);
-        //alert("sideCsqr = " + sideCsqr);
     var sideAsqr=sideCsqr-sideBsqr;
-        //var sideAsqr=Math.round(sideAsqr);
-        //alert("sideAsqr = " + sideAsqr);
     var sideA=Math.sqrt(sideAsqr);
-        //alert("sideA = " + sideA);
     var sideA=sideA.toFixed(1)
     alert("Side A length is " + sideA);
 }
@@ -44,16 +38,10 @@ if (sideB == "")
 {
    alert("Determining length of Side B");
     var sideAsqr = Math.pow(sideA,2);
-        //alert("sideAsqr = " + sideAsqr);
     var sideCsqr=Math.pow(sideC, 2);
     var sideCsqr=sideCsqr.toFixed(2)
-        //var sideCsqr=Math.round(sideCsqr);
-        //alert("sideCsqr = " + sideCsqr);
     var sideBsqr=sideCsqr-sideAsqr;
-        //var sideBsqr=Math.round(sideBsqr);
-        //alert("sideBsqr = " + sideBsqr);
     var sideB=Math.sqrt(sideBsqr);
-        //alert("sideB = " + sideB);
     var sideB=sideB.toFixed(1)
     alert("Side B length is " + sideB);
 }
@@ -62,15 +50,9 @@ if (sideC == "")
 {
    alert("Determining length of Side C");
     var sideAsqr = Math.pow(sideA,2);
-        //alert("sideAsqr = " + sideAsqr);
     var sideBsqr=Math.pow(sideB, 2);
-        //var sideBsqr=Math.round(sideBsqr);
-        //alert("sideBsqr = " + sideBsqr);
     var sideCsqr=sideAsqr+sideBsqr;
-        //var sideCsqr=Math.round(sideCsqr);
-        //alert("sideCsqr = " + sideCsqr);
     var sideC=Math.sqrt(sideCsqr);
-        //alert("sideC = " + sideC);
     RndDigits=prompt("How many decimal places should we round to?","");
       if (RndDigits == "")
       {
